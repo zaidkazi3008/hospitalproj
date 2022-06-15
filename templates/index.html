@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="main-panel">
+<div class="container-fluid px-0">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
+{% endif %}
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x900/?hospital"  class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Welcome to best Hospital</h5>
+      </div>
+    </div>
+</div>
+</div> 
+<!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="static/vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="static/js/off-canvas.js"></script>
+  <script src="static/js/hoverable-collapse.js"></script>
+  <script src="static/js/template.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <!-- End custom js for this page-->
+    <!-- page-body-wrapper ends -->
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/base/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <!-- endinject -->
+{% comment %} <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="d-flex justify-content-between flex-wrap">
+                <div class="d-flex align-items-end flex-wrap">
+                  <div class="mr-md-3 mr-xl-5">
+                    <h2>Welcome back,</h2>
+                    <p class="mb-md-0">Your dashboard template.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> {% endcomment %}
+{% endblock body %}
